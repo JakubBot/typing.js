@@ -1,0 +1,9 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: space-between;
+    min-height: 100vh;
+  text-align: center;
+  flex-direction: column;
+  font-size: 2.2em;
+}

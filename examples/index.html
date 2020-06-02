@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing.js</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    
+    <div>
+        <h1>Hello</h1>
+        <h3 id="text1"></h3>
+        <h3 id="text2"></h3>
+    </div>
+    
+    <script src="/src/typing.min.js"></script>
+    <script>
+        //you can initialize object with default values
+    let text1 = new Typing("#text1",["Welcome you here","and encourage you to see my small library","This library has lots of options that will help you control text"])
+   
+        //or if you want, you can change values!
+    let text2 = new Typing("#text2",["Sample text"],{
+        //lets change all default values
+        delay:1000,
+        speed:200,
+        line:false,
+        once:true,
+        speedHiding: 30
+    })
+    //pattern is 
+    // variable = new Typing("target",["your sentances","everything in array","it can be multiple sentences"],and object with your values(its optional))
+
+
+     //if it doesnt work try to open it immediately in browser not from your text editor
+    </script>
+</body>
+</html>
