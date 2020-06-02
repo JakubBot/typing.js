@@ -1,5 +1,5 @@
 ### Typing.js           
-This script allows you to show and hide letter by letter on your page           
+This library allows you to show and hide letter by letter on your page           
 
 Getting Started
 ### At first everything what you need is to download typing.js from github.           
