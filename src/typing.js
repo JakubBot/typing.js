@@ -25,7 +25,7 @@ function Typing(target, sentences, textOptions = {}) {
 
   //min height,no collapse if there is no text
   setHeight(TARGET);
-  setTimeout(function () {
+  setTimeout(()=> {
     showLetters(auxiliaryVariables, sentences, TARGET, textOptions);
   }, textOptions.delayShow);
 }
@@ -52,7 +52,7 @@ function showLetters(auxiliaryVariables, sentences, TARGET, textOptions) {
   auxiliaryVariables.count++;
 
   if (auxiliaryVariables.changeState === false) {
-    setTimeout(function () {
+    setTimeout(()=> {
       showLetters(auxiliaryVariables, sentences, TARGET, textOptions);
     }, textOptions.speedShowing);
   } else {
@@ -60,7 +60,7 @@ function showLetters(auxiliaryVariables, sentences, TARGET, textOptions) {
     auxiliaryVariables.particularSentance =
       sentences[auxiliaryVariables.number];
     if (textOptions.hideLetters === true)
-      setTimeout(function () {
+      setTimeout(()=> {
         hideLetters(auxiliaryVariables, sentences, TARGET, textOptions);
       }, textOptions.delayHide);
   }
@@ -78,7 +78,7 @@ function hideLetters(auxiliaryVariables, sentences, TARGET, textOptions) {
   }
   auxiliaryVariables.count++;
   if (auxiliaryVariables.changeState === false)
-    setTimeout(function () {
+    setTimeout(()=> {
       hideLetters(auxiliaryVariables, sentences, TARGET, textOptions);
     }, textOptions.speedHiding);
   if (auxiliaryVariables.changeState === true) {
@@ -88,7 +88,7 @@ function hideLetters(auxiliaryVariables, sentences, TARGET, textOptions) {
       auxiliaryVariables.number = 0;
       if (textOptions.once === true) return;
     }
-    setTimeout(function () {
+    setTimeout(()=> {
       showLetters(auxiliaryVariables, sentences, TARGET, textOptions);
     }, textOptions.delayShow);
   }
