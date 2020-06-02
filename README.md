@@ -22,10 +22,10 @@ let text1 = new Typing("#text1",["Welcome you here","and encourage you to see my
 ### For more exampels look at typing - master > examples > index.html
 
 ### Default values(everything you can change)
--line:true
--once:false
--hideLetters: true
--delayShow:800
+-line:true                                                                                                 
+-once:false               
+-hideLetters: true            
+-delayShow:800 
 -speedShowing:150
 -delayHide: 1000
 -speedHiding: 50
