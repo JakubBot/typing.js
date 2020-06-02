@@ -31,13 +31,13 @@ let text1 = new Typing("#text1",["Welcome you here","and encourage you to see my
 -speedHiding: 50           
 
 ### what every value means
-line - true = vertical line is displaying, false = vertical line is not displaying  |
-once - is your script should be repeating once?   |
-hideLetters - you can stop hiding letters if you want only display them  |
-delayShow - time before you will see a text  |
-speedShowing - its speed between displaying every letter  |
-delayHide - its time when showing was ended and it's gonna hide letters  |
-speedHiding - its speed between hiding every letter
+line - true = vertical line is displaying, false = vertical line is not displaying            
+once - is your script should be repeating once?              
+hideLetters - you can stop hiding letters if you want only display them             
+delayShow - time before you will see a text             
+speedShowing - its speed between displaying every letter            
+delayHide - its time when showing was ended and it's gonna hide letters             
+speedHiding - its speed between hiding every letter           
 
 ### Authors
 Jakub Bot
