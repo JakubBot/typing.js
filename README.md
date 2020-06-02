@@ -25,10 +25,10 @@ let text1 = new Typing("#text1",["Welcome you here","and encourage you to see my
 -line:true                                                                                                 
 -once:false               
 -hideLetters: true            
--delayShow:800 
--speedShowing:150
--delayHide: 1000
--speedHiding: 50
+-delayShow:800            
+-speedShowing:150           
+-delayHide: 1000           
+-speedHiding: 50           
 
 ### what every value means
 line - true = vertical line is displaying, false = vertical line is not displaying  |
