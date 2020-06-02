@@ -4,7 +4,7 @@ This script allows you to show and hide letter by letter on your page
 Getting Started
 ### At first everything what you need is to download typing.js from github.           
 After that you need to connect script to your document. Library should be at the bottom of body tag. Script is in           
-typing - master > src > typing.js           
+typing - master > src > typing.js            
 Copy it to your folder and hook up the script           
 It should be looking like this           
 ```
@@ -16,7 +16,7 @@ or with minify version
 Pattern for initializing is: 
 variable = new Typing("target",["your sentances","everything in array"],and object with your values(its optional))
 
-for example it can be looking like that:
+for example it can be looking like that:           
 let text1 = new Typing("#text1",["Welcome you here","and encourage you to see my small library","This library has lots of options that will help you control text"],{speedShowing: 100})
       
 ### For more exampels look at typing - master > examples > index.html
