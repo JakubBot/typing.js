@@ -1,12 +1,12 @@
-### Typing.js
-This script allows you to show and hide letter by letter on your page
+### Typing.js           
+This script allows you to show and hide letter by letter on your page           
 
 Getting Started
-### At first everything what you need is to download typing.js from github.
-After that you need to connect script to your document. Library should be at the bottom of body tag. Script is in
-typing - master > src > typing.js
-Copy it to your folder and hook up the script
-It should be looking like this
+### At first everything what you need is to download typing.js from github.           
+After that you need to connect script to your document. Library should be at the bottom of body tag. Script is in           
+typing - master > src > typing.js           
+Copy it to your folder and hook up the script           
+It should be looking like this           
 ```
 <script src="typing.js"></script>
 or with minify version
