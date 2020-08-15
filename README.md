@@ -22,21 +22,21 @@ let text1 = new Typing("#text1",["Welcome you here","and encourage you to see my
 ### For more exampels look at typing - master > examples > index.html
 
 ### Default values(everything you can change)
--line:true                                                                                                 
--once:false               
--hideLetters: true            
--delayShow:800            
--speedShowing:150           
--delayHide: 1000           
--speedHiding: 50           
+- line:true                                                                                                 
+- once:false               
+- hideLetters: true            
+- delayShow:800            
+- speedShowing:150           
+- delayHide: 1000           
+- speedHiding: 50           
 
 ### What every value means
 line - true = vertical line is displaying, false = vertical line is not displaying            
-once - is your script should be repeating once?              
-hideLetters - you can stop hiding letters if you want only display them             
+once - is your script should be repeating once             
+hideLetters - false = stop hiding letters, true = hiding letters          
 delayShow - time before you will see a text             
 speedShowing - its speed between displaying every letter            
-delayHide - its time when showing was ended and it's gonna hide letters             
+delayHide - its time when showing has ended and it's gonna hide letters             
 speedHiding - its speed between hiding every letter           
 
 ### Authors
