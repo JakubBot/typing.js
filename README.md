@@ -30,7 +30,7 @@ let text1 = new Typing("#text1",["Welcome you here","and encourage you to see my
 -delayHide: 1000           
 -speedHiding: 50           
 
-### what every value means
+### What every value means
 line - true = vertical line is displaying, false = vertical line is not displaying            
 once - is your script should be repeating once?              
 hideLetters - you can stop hiding letters if you want only display them             
