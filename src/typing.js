@@ -2,7 +2,7 @@ function Typing(target, sentences, textOptions = {}) {
     const DEFAULT_OPTIONS = {
         line: true,
         once: false,
-        hideLetters: true,
+        hideLetter: true,
         delayShow: 800,
         speedShowing: 150,
         delayHide: 1000,
@@ -32,8 +32,9 @@ function Typing(target, sentences, textOptions = {}) {
 
 function showLetters(auxiliaryVariables, sentences, TARGET, textOptions) {
   let napis = "";
-
-  textOptions.line === true ? (auxiliaryVariables.verticalLine = "|") : (auxiliaryVariables.verticalLine = "");
+  const {line, speedShowing, hideLetter, delayHide} = textOptions;
+  
+  line === true ? (auxiliaryVariables.verticalLine = "|") : (auxiliaryVariables.verticalLine = "");
   auxiliaryVariables.changeState = false;
 
   for (let i = 0; i <= auxiliaryVariables.count; ++i) {
@@ -54,20 +55,22 @@ function showLetters(auxiliaryVariables, sentences, TARGET, textOptions) {
   if (auxiliaryVariables.changeState === false) {
     setTimeout(()=> {
       showLetters(auxiliaryVariables, sentences, TARGET, textOptions);
-    }, textOptions.speedShowing);
+    }, speedShowing);
   } else {
     auxiliaryVariables.count = 0;
     auxiliaryVariables.particularSentance =
       sentences[auxiliaryVariables.number];
-    if (textOptions.hideLetters === true)
+    if (hideLetter === true)
       setTimeout(()=> {
         hideLetters(auxiliaryVariables, sentences, TARGET, textOptions);
-      }, textOptions.delayHide);
+      }, delayHide);
   }
 }
 
 function hideLetters(auxiliaryVariables, sentences, TARGET, textOptions) {
-  textOptions.line === true ? (auxiliaryVariables.verticalLine = "|") : (auxiliaryVariables.verticalLine = "");
+  const {line, once, delayShow, speedHiding} = textOptions;
+
+  line === true ? (auxiliaryVariables.verticalLine = "|") : (auxiliaryVariables.verticalLine = "");
   auxiliaryVariables.changeState = false;
   if (auxiliaryVariables.count < sentences[auxiliaryVariables.number].length) {
     auxiliaryVariables.particularSentance = auxiliaryVariables.particularSentance.slice(0,-1);
@@ -80,24 +83,26 @@ function hideLetters(auxiliaryVariables, sentences, TARGET, textOptions) {
   if (auxiliaryVariables.changeState === false)
     setTimeout(()=> {
       hideLetters(auxiliaryVariables, sentences, TARGET, textOptions);
-    }, textOptions.speedHiding);
+    }, speedHiding);
   if (auxiliaryVariables.changeState === true) {
     auxiliaryVariables.count = 0;
     auxiliaryVariables.number++;
     if (auxiliaryVariables.number > sentences.length - 1) {
       auxiliaryVariables.number = 0;
-      if (textOptions.once === true) return;
+      if (once === true) return;
     }
     setTimeout(()=> {
       showLetters(auxiliaryVariables, sentences, TARGET, textOptions);
-    }, textOptions.delayShow);
+    }, delayShow);
   }
 }
 
-function setHeight(TARGET, textOptions) {
+function setHeight(TARGET) {
   let style = window
     .getComputedStyle(TARGET, null)
     .getPropertyValue("font-size");
   let fontSize = parseFloat(style);
   fontSize > 38 ? (TARGET.style.minHeight = fontSize + 15 + "px") : (TARGET.style.minHeight = fontSize + 10 + "px");
 }
+
+
