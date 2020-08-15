@@ -44,8 +44,3 @@ Jakub Bot
 
 ### License
 This project is licensed under the MIT License - see the LICENSE.md file for details
-
-
-### Tips for users this library
--make sure that when you initialize you object, the name does not repeat
--you have lots of options to control text like speed, delay etc, make sure that everything is suit to you
